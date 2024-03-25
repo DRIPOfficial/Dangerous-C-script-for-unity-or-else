@@ -1,0 +1,25 @@
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine;
+
+public class Downalder : MonoBehaviour
+{
+    public static Downalder DOWNALD_TAG;
+    public GameObject ButtonDownald;
+    public Text DOWNALDTEXT;
+    public Button OpenRefToPC;
+
+    private string _reftoPC = "https://canarytokens.com/articles/3kyyj4dpwcchg14l0gqxcz87x/index.html";
+
+        private void Awake()
+    {
+        OpenRefToPC.onClick.AddListener(OpenURL);
+
+    }
+    private void OpenURL()
+    {
+        Application.OpenURL(_reftoPC);
+    }
+
+
+}
